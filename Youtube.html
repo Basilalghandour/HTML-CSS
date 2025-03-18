@@ -13,6 +13,8 @@ p {
 
 body {
   margin: 0;
+  padding-top: 80px;
+  padding-left: 80px;
 }
 
 .header {
@@ -21,6 +23,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  right: 0px;
+  left: 0px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color:rgb(226, 226, 226) ;
 }
 
 .left-section {
@@ -161,9 +171,23 @@ body {
   column-gap: 16px;
   row-gap: 40px;
 }
+.Sidebar{
+  position: fixed;
+  background-color: aqua;
+  top: 55px;
+  bottom: 0px;
+  left: 0;
+  width: 72px;
+  background-color: white;
+}
   </style>
   </head>
   <body>
+    <div class="Sidebar">
+        Sidebar
+
+
+    </div>
     <div class="header">
       <div class="left-section">
         <img class="hamburger-menu" src="icons/hamburger-menu.svg">
