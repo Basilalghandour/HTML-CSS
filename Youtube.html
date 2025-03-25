@@ -86,11 +86,16 @@ body {
   border-color: rgb(192, 192, 192);
   margin-left: -1px;
   margin-right: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
 }
 
 .search-icon {
   height: 25px;
-  margin-top: 4px;
+  padding-top: 5px;
 }
 
 .voice-search-button {
@@ -99,6 +104,11 @@ body {
   border-radius: 20px;
   border: none;
   background-color: rgb(245, 245, 245);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 3px;
 }
 
 .voice-search-icon {
@@ -244,6 +254,102 @@ body {
   font-size: 10px;
   z-index: 1;
 }
+.search-button .tooltip, .voice-search-button .tooltip, .upload-icon-container .tooltip, .youtube-apps-icon-container .tooltip, .notif-container .tooltip{
+  background-color: grey;
+  position: absolute;
+  color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip, .voice-search-button:hover .tooltip, .upload-icon-container:hover .tooltip, .youtube-apps-icon-container:hover .tooltip , .notif-container:hover .tooltip{
+  opacity: 1;
+  cursor: pointer;
+}
+.upload-icon-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.upload-icon-container .tooltip{
+  font-family: Roboto,Arial;
+}
+
+.youtube-apps-icon-container .tooltip{
+  font-family: Roboto,Arial;
+}
+
+.youtube-apps-icon-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.notif-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.notif-container .tooltip{
+  font-family: Roboto,Arial;
+}
+
+.youtube-apps-icon:hover{
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.upload-icon:hover{
+  cursor: pointer;
+  transition: 0.15s;
+
+}
+
+.notifications-icon:hover{
+  cursor: pointer;
+  transition: 0.15s;
+
+}
+
+.current-user-picture:hover{
+  cursor: pointer;
+  transition: 0.15s;
+
+}
+
+.voice-search-button:hover{
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.search-button:hover{
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.hamburger-menu:hover{
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.youtube-logo:hover{
+  cursor: pointer;
+  transition: 0.15s;
+}
 
   </style>
   </head>
@@ -279,16 +385,28 @@ body {
         <input class="search-bar" type="text" placeholder="Search">
         <button class="search-button">
           <img class="search-icon" src="icons/search.svg">
+          <div class="tooltip">Search</div>
         </button>
         <button class="voice-search-button">
           <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+          <div class="tooltip">Search with your voice</div>
+
         </button>
       </div>
       <div class="right-section">
+        <div class="upload-icon-container">
         <img class="upload-icon" src="icons/upload.svg">
-        <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
+        <div class="tooltip">Create</div>
+
+      </div>
+      <div class="youtube-apps-icon-container">  <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
+          <div class="tooltip">YouTube apps</div>
+
+      </div>
         <div class="notif-container">
           <img class="notifications-icon" src="icons/notifications.svg">
+          <div class="tooltip">Notifications</div>
+
           <div class="notif-count">3</div>
 
         </div>
